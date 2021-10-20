@@ -13,9 +13,6 @@
 	"autoload": {
 		"psr-4": {
 			"MiniImage\\": "src/"
-		},
-		"files": [
-			"src/helpers.php"
-		]
+		}
 	}
 }
