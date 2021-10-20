@@ -50,7 +50,7 @@ class ImageServiceProvider extends ServiceProvider
     {
         // merge default config
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/config.php',
+            __DIR__ . '/../config/image.php',
             'image'
         );
 
