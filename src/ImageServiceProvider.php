@@ -9,7 +9,6 @@ namespace MiniImage;
 
 use Intervention\Image\ImageManager;
 use Mini\Contracts\Container\BindingResolutionException;
-use Mini\Service\HttpServer\RouteService;
 use Mini\Support\ServiceProvider;
 
 class ImageServiceProvider extends ServiceProvider
@@ -73,7 +72,7 @@ class ImageServiceProvider extends ServiceProvider
         // imagecache route
         $route = config('image.route');
         if (is_string($route)) {
-            RouteService::registerHttpRoute([
+            $this->app['route']->registerHttpRoute([
                 'GET', $route . '/{template}/{filename:[\w\\.\\/\\-\\@\(\)\=]+}', 'Intervention\Image\ImageCacheController@getResponse'
             ]);
         }
