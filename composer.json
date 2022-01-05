@@ -12,11 +12,7 @@
     "require": {
         "php": "^7.4",
         "ext-gd": "*",
-        "overlu/mini-framework": "~2.13.0",
         "intervention/image": "~2.7"
-    },
-    "require-dev": {
-        "roave/security-advisories": "dev-latest"
     },
     "autoload": {
         "psr-4": {
